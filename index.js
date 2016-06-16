@@ -1,10 +1,13 @@
-
-const middleware = store => next => action => {
-  next(action);
-  if (shouldTrackAction(action)) {
-    trackAction(action);
+function middleware(store) {
+  return function(next) {
+    return function(action) {
+      next(action);
+      if (shouldTrackAction(action)) {
+        trackAction(action);
+      }
+    }
   }
-};
+}
 
 function shouldTrackAction(action) {
   return window.appInsights && action.meta && action.meta.appInsights;
@@ -20,4 +23,6 @@ function trackAction(action) {
   }
 }
 
-export default middleware;
+module.exports = {
+  middleware: middleware
+};
