@@ -33,3 +33,5 @@ You need to opt-in the actions you want to log. To do so, simply append your act
   }
 }
 ```
+
+If you only want to track an action, but don't need it's payload, set `trackPayload` to `false`.
