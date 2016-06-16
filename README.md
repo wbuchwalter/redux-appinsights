@@ -8,15 +8,12 @@
 Then simply apply the middleware to your store:
 
 ``` JavaScript
-let store = createStore(
-  todoApp,
-  applyMiddleware(
-    logger,
-    appInsightMiddleware
-  )
-)
-```
+import { insightsMonitor } from 'redux-appinsights' 
 
+const store = createStore(rootReducer,  applyMiddleware(
+  insightsMonitor
+));
+```
 
 
 ### Usage
