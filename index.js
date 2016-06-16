@@ -24,5 +24,5 @@ function trackAction(action) {
 }
 
 module.exports = {
-  middleware: middleware
+  insightsMonitor: middleware
 };
