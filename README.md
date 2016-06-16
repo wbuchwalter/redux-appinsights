@@ -24,7 +24,7 @@ let store = createStore(
 
 You need to opt-in the actions you want to log. To do so, simply append your action like so:
 
-```json
+``` JavaScript
 {
   type: 'ADD_TODO',
   payload: 'Hello World!',
