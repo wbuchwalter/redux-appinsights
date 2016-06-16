@@ -1,5 +1,5 @@
 # redux-appinsights
-Redux middleware for Application Insight
+Redux middleware for Application Insights on Azure
 
 ### Installation
 **Prerequisite:** You need to have Application Insights correctly configured in your application.
