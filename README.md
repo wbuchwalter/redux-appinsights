@@ -8,15 +8,12 @@
 Then simply apply the middleware to your store:
 
 ``` JavaScript
-let store = createStore(
-  todoApp,
-  applyMiddleware(
-    logger,
-    appInsightMiddleware
-  )
-)
-```
+import { insightsMonitor } from 'redux-appinsights' 
 
+const store = createStore(rootReducer,  applyMiddleware(
+  insightsMonitor
+));
+```
 
 
 ### Usage
@@ -28,7 +25,7 @@ You need to opt-in the actions you want to log. To do so, simply append your act
   type: 'ADD_TODO',
   payload: 'Hello World!',
   meta: {
-    appInsight: { trackPayload: true}
+    appInsights: { trackPayload: true}
   }
 }
 ```
