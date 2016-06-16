@@ -1,10 +1,9 @@
 {
   "name": "redux-appinsights",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Application Insights middleware for Redux",
   "main": "src/index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/wbuchwalter/redux-appinsights.git"
