@@ -37,14 +37,20 @@ Your actions will now show up in Application Insights:
 ![Application Insights](https://raw.githubusercontent.com/wbuchwalter/redux-appinsights/master/insights.png)
 
 ### Configuration
+You can pass a configuration object to the middleware:
 
 ``` JavaScript
-{
+const params = {
   globals: {
     env: 'dev'
   },
   exclude: ['meta']
-}
+};
+
+const store = createStore(rootReducer,  applyMiddleware(
+  insightsMonitor(params)
+));
+
 ```
 
 #### Globals  
