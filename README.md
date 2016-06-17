@@ -54,11 +54,11 @@ const store = createStore(rootReducer,  applyMiddleware(
 
 ```
 
-#### Globals  
+##### Globals  
 
 These are properties that you want to be added on every action that you track, for example, the environment on which the action occured.
 
-#### Exclude
+##### Exclude
 
 Your actions might contains things that you don't want to track, such as `meta`. Simply add them to the `exclude` array in the configuration object (this only applies to top-level member of your actions).
 
