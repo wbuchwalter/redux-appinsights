@@ -23,13 +23,17 @@ function trackAction(action, params) {
 }
 
 function buildProps(action, params) {
-  var trimmed = assign({}, action);
+  var copy = assign({}, action);
+
+  if(action.meta.appInsights.trackPayload === false) {
+    return assign({}, {type: action.type}, params.globals);
+  }
 
   foreach(params.exclude, function(e) {
-    delete trimmed[e];
+    delete copy[e];
   });
 
-  return assign({}, trimmed, params.globals);
+  return assign({}, copy, params.globals);
 }
 
 module.exports = {

@@ -30,7 +30,8 @@ You need to opt-in the actions you want to log. To do so, simply append your act
 }
 ```
 
-If you only want to track an action, but don't need it's payload, set `trackPayload` to `false`.
+If you only want to track an action, but don't need it's payload, set `trackPayload: false`.
+If you omit to set `trackPayload` it will be set to `true` by default.
 
 Your actions will now show up in Application Insights:  
   
