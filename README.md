@@ -49,7 +49,7 @@ Your actions will now show up in Application Insights:
 
 #### Globals  
 
-They are properties that you want to be defined on every action that you track, for example, the environment on which the action occured.
+These are properties that you want to be added on every action that you track, for example, the environment on which the action occured.
 
 #### Exclude
 
