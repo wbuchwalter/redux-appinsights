@@ -1,11 +1,16 @@
 import { createStore, applyMiddleware } from 'redux'
 import rootReducer from '../reducers'
-import { insightsMonitor } from 'redux-appinsights' 
+import { insightsMonitor } from 'redux-appinsights'
 
-export default function configureStore(preloadedState) {  
+export default function configureStore(preloadedState) {
   const store = createStore(rootReducer, preloadedState,  applyMiddleware(
-    insightsMonitor
-  ));
+    insightsMonitor({
+      globals: {
+        env: 'qa'
+      },
+      exclude: ['meta']
+    })
+  ))
 
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers

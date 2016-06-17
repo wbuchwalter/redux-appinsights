@@ -11,7 +11,7 @@ Then simply apply the middleware to your store:
 import { insightsMonitor } from 'redux-appinsights' 
 
 const store = createStore(rootReducer,  applyMiddleware(
-  insightsMonitor
+  insightsMonitor() //or insightsMonitor(params), see Configuration
 ));
 ```
 
@@ -35,3 +35,24 @@ If you only want to track an action, but don't need it's payload, set `trackPayl
 Your actions will now show up in Application Insights:  
   
 ![Application Insights](https://raw.githubusercontent.com/wbuchwalter/redux-appinsights/master/insights.png)
+
+### Configuration
+
+``` JavaScript
+{
+  globals: {
+    env: 'dev'
+  },
+  exclude: ['meta']
+}
+```
+
+#### Globals  
+
+They are properties that you want to be defined on every action that you track, for example, the environment on which the action occured.
+
+#### Exclude
+
+Your actions might contains things that you don't want to track, such as `meta`. Simply add them to the `exclude` array in the configuration object (this only applies to top-level member of your actions).
+
+

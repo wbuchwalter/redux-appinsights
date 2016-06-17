@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/wbuchwalter/redux-appinsights/issues"
   },
-  "homepage": "https://github.com/wbuchwalter/redux-appinsights#readme"
+  "homepage": "https://github.com/wbuchwalter/redux-appinsights#readme",
+  "dependencies": {
+    "lodash.assign": "^4.0.9",
+    "lodash.foreach": "^4.3.0"
+  }
 }
